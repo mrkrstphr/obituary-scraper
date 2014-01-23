@@ -2,6 +2,7 @@
 
 namespace Mrkrstphr\ObitScraper\Storage;
 
+use Doctrine\ORM\EntityManager;
 use Mrkrstphr\ObitScraper\Model\Obituary;
 
 /**
@@ -28,6 +29,7 @@ class DoctrineOrmStorage implements StorageInterface
      */
     public function store(Obituary $obituary)
     {
-        $this->entityManager->persist($obituary)->flush();
+        $this->entityManager->persist($obituary);
+        $this->entityManager->flush();
     }
 }

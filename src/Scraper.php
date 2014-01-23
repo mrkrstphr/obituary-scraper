@@ -106,7 +106,10 @@ class Scraper
 
             if (preg_match('/Published in (.*) from (.*) to (.*)/i', $text, $matches)) {
                 $obituary->setSource($matches[1]);
-                $obituary->setPublicationDate(new DateTime($matches[3]));
+                $obituary->setPublished(new DateTime($matches[3]));
+            } else if (preg_match('/Published in (.*) on (.*)/i', $text, $matches)) {
+                $obituary->setSource($matches[1]);
+                $obituary->setPublished(new DateTime($matches[2]));
             }
         });
 

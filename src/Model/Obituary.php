@@ -9,6 +9,11 @@ namespace Mrkrstphr\ObitScraper\Model;
 class Obituary
 {
     /**
+     * @var int
+     */
+    protected $id;
+
+    /**
      * @var string
      */
     protected $name;
@@ -26,7 +31,7 @@ class Obituary
     /**
      * @var \DateTime
      */
-    protected $publicationDate;
+    protected $published;
 
     /**
      * @param string $name
@@ -83,20 +88,20 @@ class Obituary
     }
 
     /**
-     * @param \DateTime $publicationDate
+     * @param \DateTime $published
      * @return $this
      */
-    public function setPublicationDate($publicationDate)
+    public function setPublished($published)
     {
-        $this->publicationDate = $publicationDate;
+        $this->published = $published;
         return $this;
     }
 
     /**
      * @return \DateTime
      */
-    public function getPublicationDate()
+    public function getPublished()
     {
-        return $this->publicationDate;
+        return $this->published;
     }
 }

@@ -2,7 +2,7 @@
     "name": "mrkrstphr/obit-scraper",
     "autoload": {
         "psr-4": {
-            "Mrkstphr\\ObitScraper": ["src/"]
+            "Mrkrstphr\\ObitScraper\\": ["src/"]
         }
     },
     "suggest": {
